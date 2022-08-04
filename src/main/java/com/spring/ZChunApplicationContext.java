@@ -1,10 +1,7 @@
 package com.spring;
 
-import com.zhouyu.service.ZhouyuBeanPostProcessor;
-
 import java.beans.Introspector;
 import java.io.File;
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
@@ -14,16 +11,16 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author 周瑜
+ * @author z-chun
  */
-public class ZhouyuApplicationContext {
+public class ZChunApplicationContext {
 
     private Class configClass;
     private Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
     private Map<String, Object> singletonObjects = new HashMap<>();
     private List<BeanPostProcessor> beanPostProcessorList = new ArrayList<>();
 
-    public ZhouyuApplicationContext(Class configClass) {
+    public ZChunApplicationContext(Class configClass) {
         this.configClass = configClass;
 
         // 扫描
@@ -123,7 +120,7 @@ public class ZhouyuApplicationContext {
             String path = componentScanAnnotation.value();
             path = path.replace(".", "/");  //     com/zhouyu/service
 
-            ClassLoader classLoader = ZhouyuApplicationContext.class.getClassLoader();
+            ClassLoader classLoader = ZChunApplicationContext.class.getClassLoader();
             URL resource = classLoader.getResource(path);
             File file = new File(resource.getFile());
 

@@ -1,4 +1,4 @@
-package com.zhouyu.service;
+package com.zchun.service;
 
 import com.spring.BeanPostProcessor;
 import com.spring.Component;
@@ -8,16 +8,16 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @author 周瑜
+ * @author z-chun
  */
 @Component
-public class ZhouyuBeanPostProcessor implements BeanPostProcessor {
+public class ZChunBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) {
 
         if (beanName.equals("userService")) {
-            Object proxyInstance = Proxy.newProxyInstance(ZhouyuBeanPostProcessor.class.getClassLoader(), bean.getClass().getInterfaces(), new InvocationHandler() {
+            Object proxyInstance = Proxy.newProxyInstance(ZChunBeanPostProcessor.class.getClassLoader(), bean.getClass().getInterfaces(), new InvocationHandler() {
                 @Override
                 public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                     // 切面

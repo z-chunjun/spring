@@ -1,9 +1,9 @@
-package com.zhouyu.service;
+package com.zchun.service;
 
 import com.spring.*;
 
 /**
- * @author 周瑜
+ * @author z-chun
  */
 @Component
 public class UserService implements UserInterface, BeanNameAware {
@@ -11,7 +11,7 @@ public class UserService implements UserInterface, BeanNameAware {
     @Autowired
     private OrderService orderService;
 
-    @ZhouyuValue("xxx")
+    @ZChunValue("xxx")
     private String test;
 
 

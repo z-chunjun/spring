@@ -1,4 +1,4 @@
-package com.zhouyu.service;
+package com.zchun.service;
 
 public interface UserInterface {
 

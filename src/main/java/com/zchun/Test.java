@@ -1,18 +1,17 @@
-package com.zhouyu;
+package com.zchun;
 
-import com.spring.ZhouyuApplicationContext;
-import com.zhouyu.service.UserInterface;
-import com.zhouyu.service.UserService;
+import com.spring.ZChunApplicationContext;
+import com.zchun.service.UserInterface;
 
 /**
- * @author 周瑜
+ * @author z-chun
  */
 public class Test {
 
     public static void main(String[] args) {
 
         // 扫描--->创建单例Bean BeanDefinition BeanPostPRocess
-        ZhouyuApplicationContext applicationContext = new ZhouyuApplicationContext(AppConfig.class);
+        ZChunApplicationContext applicationContext = new ZChunApplicationContext(AppConfig.class);
 
         UserInterface userService = (UserInterface) applicationContext.getBean("userService");
         userService.test();

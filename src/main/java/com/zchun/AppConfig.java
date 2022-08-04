@@ -1,9 +1,9 @@
-package com.zhouyu;
+package com.zchun;
 
 import com.spring.ComponentScan;
 
 /**
- * @author 周瑜
+ * @author z-chun
  */
 
 @ComponentScan("com.zhouyu.service")
